@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Barbershop</title>
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style.css"></head>
+<body class="body-barber">
+<div class="header">
+	<div class="wrapper">
+				<ul class="menu">
+				<li class="menu-item menu-item--active">
+					<a class="menu-item__link" href="index.html">Главная</a>
+				</li>
+				<li class="menu-item">
+					<a href="#" class="menu-item__link">Информация</a>
+				</li>
+				<li class="menu-item">
+					<a href="#" class="menu-item__link">Новости</a>
+				</li>
+				<li class="menu-item">
+					<a href="price.html" class="menu-item__link">Прайс-лист</a>
+				</li>
+				<li class="menu-item">
+					<a href="shop.html" class="menu-item__link">Магазин</a>
+				</li>
+				<li class="menu-item">
+					<a href="#" class="menu-item__link">Контакты</a>
+				</li>
+			</ul>
+			<div class="menu-account">
+				<a class="menu-account-link" href="#">Вход</a>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="logo">
+			<a href="#">
+				<img src="img/logo.png" alt="Барбершоп"></a>
+		</div>
+		<ul class="feature">
+			<li class="feature-item">
+				<div class="feature-item__title">Быстро</div>
+				<p class="feature-item__text">
+					Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладетель стильной стрижки-минутки!
+				</p>
+			</li>
+			<li class="feature-item">
+				<div class="feature-item__title">Круто</div>
+				<p class="feature-item__text">
+					Забудьте, как вы стриглись раньше.
+					<br>
+					Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.
+				</p>
+			</li>
+			<li class="feature-item">
+				<div class="feature-item__title">Дорого</div>
+				<p class="feature-item__text">
+					Наши мастера — профессионалы своего дела и не могут стоить дешево. К тому же, разве цена не дает определеный статус?
+				</p>
+			</li>
+		</ul>
+	</div>
+	<div class="wrapper">
+		<div class="index-section">
+			<div class="section-column">
+				<ul class="column-block section-column--border">
+					<h2 class="column-block__title">Новости</h2>
+					<li class="column-block__text">
+						<a class="column-block__text-link" href="#">
+							Нам наконец завезли Ягермейстер! Теперь вы
+							<br>можете пропустить стаканчик во время стрижки</a>
+						<span class="date">25 сентября</span>
+					</li>
+					<li class="column-block__text">
+						<a class="column-block__text-link" href="#">
+							В нашей команде пополнение, Борис «Бритва» Стригунец, обладетель множетсва титулов и наград пополнил наши стройные ряды
+						</a>
+						<span class="date">19 сентября</span>
+					</li>
+					<div class="index-btn-control">
+						<a class="btn" href="#">Все новости</a>
+					</div>
+				</ul>
+			</div>
+			<div class="section-column section-column--style">
+				<div class="column-block">
+					<h2 class="column-block__title">Фотогалерея</h2>
+					<div class="column-block__gallery">
+						<img src="img/image-gallery.jpg"></div>
+					<div class="index-btn-control index-btn-control--left">
+						<a class="btn" href="#">Назад</a>
+					</div>
+					<div class="index-btn-control index-btn-control--right">
+						<a class="btn" href="#">Вперед</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="wrapper">
+		<div class="index-section">
+			<div class="section-column">
+				<div class="column-block section-column--border">
+					<h2 class="column-block__title">Контактная информация</h2>
+					<div class="column-block__text">
+						BARBERSHOP «BORODINSKI»
+						<br>
+						АДРЕС: Г. МОСКВА, УЛ. СОБАКИ ПАВЛОВА, Д. 13
+						<br>
+						ТЕЛЕФОН: +7 (495) 666-02-666
+						<br></div>
+					<div class="column-block__text column-block__text--top">
+						ВРЕМЯ РАБОТЫ:
+						<br>
+						ПН — ПТ: С 10:00 ДО 22:00
+						<br>СБ — ВС: С 10:00 ДО 19:00</div>
+					<div class="index-btn-control index-btn-control--left">
+						<a class="btn" href="#">Как проехать</a>
+					</div>
+					<div class="index-btn-control index-btn-control--right">
+						<a class="btn" href="#">Обратная связь</a>
+					</div>
+				</div>
+			</div>
+			<div class="section-column section-column--style">
+				<div class="column-block">
+					<h2 class="column-block__title">Записаться</h2>
+
+					<p class="column-block__text">
+						Укажите желаемую дату и время и мы свяжемся
+						<br>с вами для подтверждения брони</p>
+					<form class="column-block__form" action="#" method="post" id="orderForm">
+						<fieldset class="column-block__form-fieldset">
+							<input type="text" name="date" placeholder="Дата">
+							<input type="text" name="time" placeholder="Время"></fieldset>
+						<fieldset class="column-block__form-fieldset">
+							<input type="text" name="name" placeholder="Ваше имя">
+							<input type="text" name="phone" placeholder="Телефон"></fieldset>
+						<fieldset class="column-block__form-fieldset">
+							<input type="submit" class="btn-contr btn index-btn-control" value="Отправить"></fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+		 <div class="login-popup">
+		 <a href="#" class="login-popup-close"></a>
+            <form class="login-form" action="/auth" method="post">
+                <input class="ligin-ico login-field" type="text" name="login" placeholder="Логин">
+                <input class="ligin-ico password-field" type="password" name="password" placeholder="Пароль">
+                <a class="restore" href="/restore">Я забыл пароль</a>
+                <label><input type="checkbox" name="remember"> Запомните меня</label>                
+                <input type="submit" value="Войти">
+            </form>
+        </div>
+        <script>
+
+  var link = document.querySelector('.menu-account-link');
+  var popup = document.querySelector('.login-popup');
+  var close = popup.querySelector('.login-popup-close');
+  var form = popup.querySelector('form');
+  var login = form.querySelector('.login-field');
+  var password = form.querySelector('.password-field');
+  var storage = localStorage.getItem('login');
+
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    popup.classList.add('login-popup-show');
+    if (storage) {
+      login.value = storage;
+      password.focus();
+    } else {
+      login.focus();
+    }
+  }, false);
+
+  close.addEventListener('click', function(event) {
+    event.preventDefault();
+    popup.classList.remove('login-popup-show');
+  }, false);
+
+  form.addEventListener('submit', function(event) {
+    if (!login.value || !password.value) {
+      event.preventDefault();
+      popup.classList.add('login-popup-error');
+    } else {
+      localStorage.setItem('login', login.value);
+    }
+  }, false);
+
+  window.addEventListener('keydown', function(event) {
+    if (event.keyCode == 27 && popup.classList.contains('login-popup-show')) {
+      popup.classList.remove('login-popup-show');
+    }
+  }, false);
+
+</script>
+	</div>
+
+	<div class="footer">
+		<div class="wrapper">
+			<div class="contacts">
+				<p class="contacts__text">
+					Barbershop «Borodinski»
+					<br>
+					Адрес: г. Москва, ул. Собаки Павлова, д. 13
+					<br>Телефон: +7 (495) 666-02-666</p>
+			</div>
+			<div class="social-buttons">
+				<p class="social-buttons__text">Давайте дружить!</p>
+				<div class="social-buttons-block">
+				<a href="http://vk.com" class="social-buttons__link social-buttons__link--vk"></a></div>
+				<div class="social-buttons-block"><a href="http://facebook.com" class="social-buttons__link social-buttons__link--fb"></a></div>
+				<div class="social-buttons-block"><a href="http://instagram.com" class="social-buttons__link social-buttons__link--insta"></a></div>
+			</div>
+			<div class="copyright">
+				<p class="copyright__text">Дизайн сайта:</p>
+				<a class="btn copyright__link" href="http://glukhanko.ru/">glukhanko.ru</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

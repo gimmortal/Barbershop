@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Barbershop</title>
+	<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="style.css"></head>
+<body>
+	<div class="header">
+		<div class="wrapper">
+			<ul class="menu">
+				<li class="menu-item ">
+					<a class="menu-item__link" href="index.html">Главная</a>
+				</li>
+				<li class="menu-item">
+					<a href="#" class="menu-item__link">Информация</a>
+				</li>
+				<li class="menu-item">
+					<a href="#" class="menu-item__link">Новости</a>
+				</li>
+				<li class="menu-item menu-item--active">
+					<a href="price.html" class="menu-item__link">Прайс-лист</a>
+				</li>
+				<li class="menu-item">
+					<a href="shop.html" class="menu-item__link">Магазин</a>
+				</li>
+				<li class="menu-item">
+					<a href="#" class="menu-item__link">Контакты</a>
+				</li>
+			</ul>
+			<div class="menu-account">
+				<a class="menu-account-link" href="#">Вход</a>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div id="triangle-right"></div>
+		<h1 class="page-title">Barbershop Borodinski – Прайс-лист</h1>
+		<ul class="breadcrumbs">
+			<li>
+				<a href="index.html">Главная</a>
+			</li>
+			<li>
+				<a href="price.html">Прайс-лист</a>
+			</li>
+		</ul>
+		<div class="p-title">
+			<h2>Истинно мужская классика</h2>
+		</div>
+		<ul class="list-left">
+			<div class="list-title">
+				Мы используем только
+				<br>лучшие средства:</div>
+			<li>Baxter of California</li>
+			<li>Mr Natty</li>
+			<li>Suavecito</li>
+			<li>Malin+Goetz</li>
+			<div class="list-title">Несколько слов о нас:</div>
+			<p class="list-text">
+				Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.
+			</p>
+		</ul>
+		<div class="list-right">
+			<div class="list-title">
+				Цены на услуги
+				<br>наших мастеров:</div>
+			<table class="list-right-prices">
+				<tr>
+					<th>Стрижка</th>
+					<td>1500 р.</td>
+				</tr>
+				<tr>
+					<th>Стрижка бороды</th>
+					<td>500 р.</td>
+				</tr>
+				<tr>
+					<th>Накрутка усов</th>
+					<td>350 р.</td>
+				</tr>
+			</table>
+			<p class="list-text">
+				Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.
+			</p>
+		</div>
+
+		<div class="login-popup">
+			<a href="#" class="login-popup-close"></a>
+			<form class="login-form" action="/auth" method="post">
+				<input class="ligin-ico login-field" type="text" name="login" placeholder="Логин">
+				<input class="ligin-ico password-field" type="password" name="password" placeholder="Пароль">
+				<a class="restore" href="/restore">Я забыл пароль</a>
+				<label>
+					<input type="checkbox" name="remember">Запомните меня</label>
+				<input type="submit" value="Войти"></form>
+		</div>
+		<script>
+
+  var link = document.querySelector('.menu-account-link');
+  var popup = document.querySelector('.login-popup');
+  var close = popup.querySelector('.login-popup-close');
+  var form = popup.querySelector('form');
+  var login = form.querySelector('.login-field');
+  var password = form.querySelector('.password-field');
+  var storage = localStorage.getItem('login');
+
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+    popup.classList.add('login-popup-show');
+    if (storage) {
+      login.value = storage;
+      password.focus();
+    } else {
+      login.focus();
+    }
+  }, false);
+
+  close.addEventListener('click', function(event) {
+    event.preventDefault();
+    popup.classList.remove('login-popup-show');
+  }, false);
+
+  form.addEventListener('submit', function(event) {
+    if (!login.value || !password.value) {
+      event.preventDefault();
+      popup.classList.add('login-popup-error');
+    } else {
+      localStorage.setItem('login', login.value);
+    }
+  }, false);
+
+  window.addEventListener('keydown', function(event) {
+    if (event.keyCode == 27 && popup.classList.contains('login-popup-show')) {
+      popup.classList.remove('login-popup-show');
+    }
+  }, false);
+
+</script>
+
+	</div>
+
+	<div class="footer">
+		<div class="wrapper">
+			<div class="contacts">
+				<p class="contacts__text">
+					Barbershop «Borodinski»
+					<br>
+					Адрес: г. Москва, ул. Собаки Павлова, д. 13
+					<br>Телефон: +7 (495) 666-02-666</p>
+			</div>
+			<div class="social-buttons">
+				<p class="social-buttons__text">Давайте дружить!</p>
+				<div class="social-buttons-block">
+					<a href="http://vk.com" class="social-buttons__link social-buttons__link--vk"></a>
+				</div>
+				<div class="social-buttons-block">
+					<a href="http://facebook.com" class="social-buttons__link social-buttons__link--fb"></a>
+				</div>
+				<div class="social-buttons-block">
+					<a href="http://instagram.com" class="social-buttons__link social-buttons__link--insta"></a>
+				</div>
+			</div>
+			<div class="copyright">
+				<p class="copyright__text">Дизайн сайта:</p>
+				<a class="btn copyright__link" href="http://glukhanko.ru/">glukhanko.ru</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
